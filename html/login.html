@@ -2,9 +2,54 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <link rel="stylesheet" href="/css/link.css">
+
+    <title>Form Validation</title>
+    <script type="text/javascript">
+        function Validate(){
+            if(document.myForm.EMail.value ==""){
+                alert("Please provide your Email");
+                document.myForm.EMail.focus()
+                return false
+            }else if(document.myForm.Password.value ==""){   
+            alert("Please provide your Password");
+                    document.myForm.Password.focus()
+                    return false
+            }
+            else {
+                return true
+            }
+        }
+    </script>
 </head>
 <body>
+<div class="hero">
+   
+<div class="container">
+    <img src="/Images/LOGO.png" class="logo">
+</div>
+    <div class="form-box">
+        <h2>Login</h2>
+        <form action="login.html" name="myForm" onsubmit="return(Validate());">
+        <label for="email"><b>EMail</b></label>
+        <input type="text" placeholder="Enter Email" name="EMail" require
+        id="email"><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required
+        id="password"><br>
+        <div class="btn">
+        <!-- <button type="button" class="toggle-btn">Log In</button><br> -->
 
+            <span class="psw">Forgot <a href="#">password?</a></span><br>
+            <button type="submit">Submit</button>
+        <!-- <div class="container" style="background-color:#5c6f7a"> -->
+    </div>
+    <!-- <div class="button-box">
+        <a href="register.html">  
+            Click Register 
+          </a> -->
+        </div>
+       </div>
+</div>
 </body>
 </html>
