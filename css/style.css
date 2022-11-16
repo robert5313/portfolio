@@ -52,12 +52,3 @@
     text-align: center;
     color: white;
 }
-.cluster{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.web{
-    position: absolute;
-    top: 50%;
-}
