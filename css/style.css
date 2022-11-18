@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     font-family: sans-serif;
+    font-size:16px;
 }
 .Banner{
     width: 100%;
@@ -10,7 +11,7 @@
     background-size: cover;
     background-position: center;
 }
-.navbar{
+.navbar {
     width: 85%;
     margin: auto;
     padding: 35px 0;
@@ -44,6 +45,7 @@
     width: 100%;
 
 }
+
 .content{
     width:100%;
     position: absolute;
@@ -52,12 +54,93 @@
     text-align: center;
     color: white;
 }
-.cluster{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+.menuBtn{
+    
+    background-color:transparent;
+    color: white;
+    padding:6px 0;
+    border:none;
+    font-family:sans-serif;
+    font-size:16px;
+    text-decoration:none;
+    text-transform:uppercase;
 }
-.web{
+.menuBtn::after{
+    content: '';
+    height:3px;
+    width: 0;
+    background: #0094ff;
     position: absolute;
-    top: 50%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
 }
+.menuBtn:hover::after{
+    border-radius:10px;
+    width: 100%;
+}
+.dropDown{
+    position:relative;
+    display:inline-block;
+}
+.menuContent{
+    display:none;
+    position:absolute;
+    background-color: transparent;
+    min-width:30px;
+    
+   
+}
+.hiddenLink{
+    display:inline-block;
+    
+}
+.dropDown:hover:hover .menuContent{
+    display:block;
+    position:absolute;
+    background-color:rgb(0 0 0 / 0.65);
+    margin-top: 10px;
+    border-radius:10px;
+    
+}
+.dropDown:hover:hover .hiddenLink {
+    margin: 10px;
+    border-bottom: 1px solid white;
+    width:auto;
+    padding: 10px;
+    text-align:center;
+    border-radius:0px;
+
+}
+.dropDown:hover:hover .menuContent:last-child {
+    border-bottom:none;
+}
+
+.menuContent .Profilepic {
+    font-size:1.5em;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0, 0, 0, 0.75)),url(/Images/ProfilePictures/Compas.png);
+}
+
+/*sign button*/
+
+.SignBtn {
+    background-color: black;
+    border-radius:10px;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.SignBtn:hover {
+    border-radius: 10px;
+    background-color:white;
+    color:black;
+    
+}
+
+
