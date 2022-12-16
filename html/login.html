@@ -1,25 +1,78 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>The Boys Login</title>
-
+    <title>Login page</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/09b4712411.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--OUR Banner-->
-    <div class="Banner">
-        <div class="navbar">
-            <img src="/Images/LOGO.png" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-            </nav>
+    <div class="container">
+        <img src="/Images/LOGO.png" class="logo">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+
+                    <p id="tryname">Forgot Password <a href="#">Click Here</a></p>
+
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up👇️</button>
+                    <button type="button" id="signinBtn" class="disable">Sign in</button>
+                </div>
         </div>
+
+        </form>
     </div>
 
+    </div>
+
+
+    <script>
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+
+
+        signinBtn.onclick = function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+//  Change text color on mouseover
+signinBtn.addEventListener('mouseover', function handleMouseOver() {
+  signupBtn.style.color = 'green';
+});
+
+// 👇️ Change text color back on mouseout
+signinBtn.addEventListener('mouseout', function handleMouseOut() {
+  signupBtn.style.color = 'black';
+});
+
+    </script>
 </body>
 </html>
